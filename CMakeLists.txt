@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.0)
+FIND_PACKAGE( OpenCV REQUIRED )
+project(automatted-classifier)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+add_executable(automatted-classifier automatted-classifier.cpp)
+TARGET_LINK_LIBRARIES( automatted-classifier ${OpenCV_LIBS} )
